@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  api:
+    container_name: sample-api-dev
+    build: ./fastapi
+    restart: always
+    volumes:
+      - ./fastapi/src:/code/app
+    ports:
+      - 8000:80

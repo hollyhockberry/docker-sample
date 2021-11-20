@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: sample-app2
+    build:
+      context: ./vue
+      dockerfile: Dockerfile.prod
+    networks:
+      - app_bridge
+
+networks:
+  app_bridge:
+    external: true

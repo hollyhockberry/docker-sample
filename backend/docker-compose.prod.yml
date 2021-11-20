@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  api:
+    container_name: sample-api
+    build:
+      context: ./fastapi
+      dockerfile: Dockerfile.prod
+    restart: always
+    networks:
+      - app_bridge
+
+networks:
+  app_bridge:
+    external: true

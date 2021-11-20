@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: sample-app1-dev
+    build: ./vue
+    ports:
+      - 8001:8080
+    volumes:
+      - ./vue/src/:/app
+    tty: true
